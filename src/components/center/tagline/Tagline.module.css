@@ -1,0 +1,33 @@
+.mainTag {
+    font-weight: bold;
+    font-size: 10em;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 90%;
+}
+
+.taglineBlock {
+    width: 550px;
+    margin: 0;
+    padding: 80px;
+    color: white;
+}
+
+.descriptionBlock {
+    /*width: 80%;*/
+    padding-top: 40px;
+    padding-bottom: 60px;
+    margin: auto;
+}
+
+.colored {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right, #dd6ecb, #7e79e0);
+}
+
+.buttonLine {
+    display: flex;
+    justify-content: space-between;
+}

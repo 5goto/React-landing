@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+}
+
+.headerLeftBlock {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.headerLeftBlock * {
+    margin-right: 30px;
+}

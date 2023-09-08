@@ -1,0 +1,5 @@
+.dronePicture {
+    width: 60%;
+    z-index: 5;
+    pointer-events: none;
+}

@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import {useState} from "react";
 import './App.css';
+import BottomFrame from "./components/bottomFrame/bottomFrame";
+import CenterFrame from "./components/center/CenterFrame";
+import Header from "./components/header/Header";
+import ModalWindow from "./components/UI/ModalWindow";
+import PurchaseForm from "./components/postForm/PurchaseForm";
+import Promo from "./components/promo/Promo";
+
+
 
 function App() {
+    const [modal, setModal] = useState(false)
+    const [inputData, setInputData] = useState({})
+    const handleChange = (e) => {
+        setInputData({ ...inputData, [e.target.id]: e.target.value });
+        console.log(inputData)
+    };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header/>
+        <CenterFrame modalHandler={()  => setModal(true)}/>
+        <BottomFrame></BottomFrame>
+        <ModalWindow visible={modal} setVisible={() => setModal(false)}>
+            <Promo/>
+            <PurchaseForm setModal={() => setModal(false)}
+                          valueObject={inputData} handleChange={handleChange}
+                          addHandler={() => console.log('SUBMIT')}
+            />
+        </ModalWindow>
     </div>
   );
 }

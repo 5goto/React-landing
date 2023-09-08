@@ -1,0 +1,25 @@
+.navbar_ul {
+    display: flex;
+    margin: 0;
+    padding-top: 15px;
+}
+
+.navbar{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-right: 110px;
+}
+
+.navLi {
+    list-style-type: none;
+    padding-left: 60px;
+    font-size: 24px;
+}
+
+a.text:active, /* активная/посещенная ссылка */
+a.text:hover,  /* при наведении */
+a.text {
+    text-decoration: none;
+    color: #666;
+}
